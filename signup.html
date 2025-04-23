@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MediLocate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FAFAFA;
+        }
+        .signup-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .signup-container h2 {
+            color: #00A676;
+            margin-bottom: 20px;
+        }
+        .signup-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background: #00A676;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .signup-container button:hover {
+            background: #008C5E;
+            font-weight: bold;
+
+        }
+        .social-signup {
+            margin-top: 15px;
+        }
+        .social-signup button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .google-signup {
+            background: #DB4437;
+            color: white;
+        }
+        .google-signup:hover {
+            background: #C1351D;
+            font-weight: bold;
+
+        }
+        .facebook-signup {
+            background: #1877F2;
+            color: white;
+        }
+        .facebook-signup:hover {
+            background: #1257A6;
+            font-weight: bold;
+        }
+        .login-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .login-link a {
+            color: #00A676;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        .google-signup.facebook-signup:hover{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="social-signup">
+            <button class="google-signup"><i class="fab fa-google"></i>Sign Up with Google</button>
+            <button class="facebook-signup"><i class="fab fa-facebook"></i>Sign Up with Facebook</button>
+        </div>
+        <p class="login-link">Already have an account? <a href="index.html">Login</a></p>
+    </div>
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents actual form submission
+            window.location.href = "index.html"; // Redirects to landing page
+        });
+    </script>
+</body>
+</html>

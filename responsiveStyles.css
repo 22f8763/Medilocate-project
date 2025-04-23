@@ -1,0 +1,232 @@
+/* Responsive styles for MediLocate website */
+
+/* Base responsive container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 992px) {
+  /* Header responsive styles */
+  header .container {
+    flex-wrap: wrap;
+  }
+  
+  header .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  header .main-nav {
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 15px;
+  }
+  
+  header .main-nav ul {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  header .main-nav ul li a {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  
+  header .auth-buttons {
+    order: 1;
+    margin: 0 auto;
+  }
+  
+  /* Category navbar responsive */
+  .category-navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+  }
+  
+  .category-navbar ul li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  /* Hero section responsive */
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Feature grid responsive */
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Equipment grid responsive */
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Small screens (mobile phones) */
+@media screen and (max-width: 768px) {
+  /* Header responsive styles */
+  header {
+    padding: 15px 0;
+  }
+  
+  header .main-nav ul li a {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  
+  /* Auth buttons responsive */
+  header .auth-buttons .btn-login,
+  header .auth-buttons .btn-signup {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  /* Hero section responsive */
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .search-bar button {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Advertisement responsive */
+  .advertisement .ad-content {
+    padding: 20px;
+  }
+  
+  .advertisement h2 {
+    font-size: 22px;
+  }
+  
+  /* Feature grid responsive */
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Equipment grid responsive */
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Testimonials responsive */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  /* Header responsive styles */
+  header .main-nav ul {
+    gap: 5px;
+  }
+  
+  header .main-nav ul li a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+  
+  /* Category navbar responsive */
+  .category-navbar ul li a {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+  
+  /* Hero section responsive */
+  .hero h1 {
+    font-size: 24px;
+  }
+  
+  .hero p {
+    font-size: 14px;
+  }
+  
+  /* Advertisement responsive */
+  .advertisement h2 {
+    font-size: 20px;
+  }
+  
+  .advertisement p {
+    font-size: 14px;
+  }
+  
+  /* Footer responsive */
+  footer {
+    padding: 20px 0;
+  }
+  
+  .footer-links,
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Form responsiveness (for login and signup) */
+@media screen and (max-width: 480px) {
+  .login-container,
+  .signup-container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  button[type="submit"],
+  .social-login button {
+    padding: 10px;
+  }
+}
+
+/* Fix for form containers */
+.login-container,
+.signup-container {
+  box-sizing: border-box;
+} 

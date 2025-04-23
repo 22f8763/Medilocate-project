@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MediLocate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FAFAFA;
+        }
+        
+        #root {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .app {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .signup-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+            transition: all 0.3s ease;
+        }
+        
+        .signup-container h2 {
+            color: #00A676;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: left;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            padding-left: 35px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #00A676;
+            box-shadow: 0 0 0 2px rgba(0, 166, 118, 0.2);
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 14px;
+            margin-top: -10px;
+        }
+        
+        .password-field {
+            position: relative;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+            font-size: 14px;
+            z-index: 10;
+            opacity: 0.7;
+            margin-top: -10px;
+        }
+        
+        .password-toggle:hover {
+            opacity: 1;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .success-message {
+            color: #00A676;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: rgba(0, 166, 118, 0.1);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #00A676;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        button[type="submit"]:hover {
+            background: #008C5E;
+            font-weight: bold;
+        }
+        
+        button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+        
+        .social-signup {
+            margin-top: 20px;
+        }
+        
+        .social-signup button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .social-signup button:active {
+            transform: scale(0.98);
+        }
+        
+        .google-signup {
+            background: #DB4437;
+            color: white;
+        }
+        
+        .google-signup:hover {
+            background: #C1351D;
+            font-weight: bold;
+        }
+        
+        .facebook-signup {
+            background: #1877F2;
+            color: white;
+        }
+        
+        .facebook-signup:hover {
+            background: #1257A6;
+            font-weight: bold;
+        }
+        
+        .login-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .login-link a {
+            color: #00A676;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 0;
+            }
+            
+            #root {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .signup-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+        }
+        
+        /* For very small screens */
+        @media (max-width: 360px) {
+            body {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Scripts for development only - In production use a bundler like webpack or vite -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- React component directly embedded -->
+    <script type="text/babel">
+        const SignupForm = () => {
+            // Form state
+            const [formData, setFormData] = React.useState({
+                fullName: '',
+                email: '',
+                password: '',
+                confirmPassword: ''
+            });
+            
+            // Validation errors state
+            const [errors, setErrors] = React.useState({});
+            
+            // Success message state
+            const [successMessage, setSuccessMessage] = React.useState('');
+            
+            // Handle input changes
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setFormData({
+                    ...formData,
+                    [name]: value
+                });
+            };
+            
+            // Validate form
+            const validateForm = () => {
+                let tempErrors = {};
+                let isValid = true;
+                
+                // Validate full name
+                if (!formData.fullName.trim()) {
+                    tempErrors.fullName = "Full name is required";
+                    isValid = false;
+                }
+                
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!formData.email.trim()) {
+                    tempErrors.email = "Email is required";
+                    isValid = false;
+                } else if (!emailRegex.test(formData.email.trim())) {
+                    tempErrors.email = "Please enter a valid email address";
+                    isValid = false;
+                }
+                
+                // Validate password
+                if (!formData.password) {
+                    tempErrors.password = "Password is required";
+                    isValid = false;
+                } else if (formData.password.length < 8) {
+                    tempErrors.password = "Password must be at least 8 characters long";
+                    isValid = false;
+                }
+                
+                // Validate password confirmation
+                if (formData.password !== formData.confirmPassword) {
+                    tempErrors.confirmPassword = "Passwords do not match";
+                    isValid = false;
+                }
+                
+                setErrors(tempErrors);
+                return isValid;
+            };
+            
+            // Handle form submission
+            const handleSubmit = async (e) => {
+                e.preventDefault();
+                
+                // Validate form
+                if (validateForm()) {
+                    try {
+                        // Simulate API call with timeout
+                        setSuccessMessage("Processing...");
+                        
+                        // Simulating server response time
+                        setTimeout(() => {
+                            setSuccessMessage("Signup successful! Redirecting to login page...");
+                            
+                            // Redirect to login page after successful signup
+                            setTimeout(() => {
+                                window.location.href = "login-standalone.html";
+                            }, 1500);
+                        }, 1000);
+                    } catch (error) {
+                        setErrors({ submit: "An error occurred during signup. Please try again." });
+                    }
+                }
+            };
+            
+            // Google signup handler
+            const handleGoogleSignup = () => {
+                // Implement Google OAuth integration
+                alert("Google signup integration would be implemented here");
+            };
+            
+            // Facebook signup handler
+            const handleFacebookSignup = () => {
+                // Implement Facebook OAuth integration
+                alert("Facebook signup integration would be implemented here");
+            };
+            
+            return (
+                <div className="signup-container">
+                    <h2>Create an Account</h2>
+                    
+                    {successMessage && <div className="success-message">{successMessage}</div>}
+                    {errors.submit && <div className="error-message">{errors.submit}</div>}
+                    
+                    <form id="signupForm" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <input 
+                                type="text" 
+                                name="fullName" 
+                                placeholder="Full Name" 
+                                value={formData.fullName}
+                                onChange={handleChange}
+                            />
+                            <i className="fas fa-user input-icon"></i>
+                            {errors.fullName && <div className="error-message">{errors.fullName}</div>}
+                        </div>
+                        
+                        <div className="form-group">
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Email" 
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
+                            <i className="fas fa-envelope input-icon"></i>
+                            {errors.email && <div className="error-message">{errors.email}</div>}
+                        </div>
+                        
+                        <div className="form-group password-field">
+                            <input 
+                                type="password" 
+                                name="password" 
+                                placeholder="Password" 
+                                value={formData.password}
+                                onChange={handleChange}
+                            />
+                            <i className="fas fa-lock input-icon"></i>
+                            {errors.password && <div className="error-message">{errors.password}</div>}
+                            <span className="password-toggle" onClick={() => {
+                                const passwordInput = document.querySelector('.form-group input[name="password"]');
+                                if (passwordInput) {
+                                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                                    passwordInput.setAttribute('type', type);
+                                }
+                            }}>
+                                <i className="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        
+                        <div className="form-group password-field">
+                            <input 
+                                type="password" 
+                                name="confirmPassword" 
+                                placeholder="Confirm Password" 
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                            />
+                            <i className="fas fa-lock input-icon"></i>
+                            {errors.confirmPassword && <div className="error-message">{errors.confirmPassword}</div>}
+                            <span className="password-toggle" onClick={() => {
+                                const confirmPasswordInput = document.querySelector('.form-group input[name="confirmPassword"]');
+                                if (confirmPasswordInput) {
+                                    const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                                    confirmPasswordInput.setAttribute('type', type);
+                                }
+                            }}>
+                                <i className="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    
+                    <div className="social-signup">
+                        <button className="google-signup" onClick={handleGoogleSignup}>
+                            <i className="fab fa-google"></i>Sign Up with Google
+                        </button>
+                        <button className="facebook-signup" onClick={handleFacebookSignup}>
+                            <i className="fab fa-facebook"></i>Sign Up with Facebook
+                        </button>
+                    </div>
+                    
+                    <p className="login-link">Already have an account? <a href="login-standalone.html">Login</a></p>
+                </div>
+            );
+        };
+        
+        const App = () => {
+            return (
+                <div className="app">
+                    <SignupForm />
+                </div>
+            );
+        };
+        
+        // Render the App component
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>
+        );
+    </script>
+</body>
+</html> 

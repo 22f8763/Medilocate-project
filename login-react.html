@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MediLocate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="loginStyles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FAFAFA;
+        }
+        
+        #root {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .login-app {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 0;
+            }
+            
+            #root {
+                padding: 10px;
+            }
+        }
+        
+        /* For very small screens */
+        @media (max-width: 360px) {
+            body {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Scripts for development only - In production use a bundler like webpack or vite -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Load our React components -->
+    <script type="text/babel" src="LoginForm.jsx"></script>
+    <script type="text/babel" src="LoginApp.jsx"></script>
+    <script type="text/babel">
+        // Create a root for React 18
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        
+        // Render the App component
+        root.render(
+            <React.StrictMode>
+                <LoginApp />
+            </React.StrictMode>
+        );
+    </script>
+</body>
+</html> 

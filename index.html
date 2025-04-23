@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLocate - Find Your Medicines</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsiveStyles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+        <i class="fas fa-capsules"></i>  MediLocate 
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login-standalone.html">
+          <button class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</button>
+        </a>
+        <a href="signup-standalone.html">
+          <button class="btn-signup"><i class="fas fa-user-plus"></i> Sign Up</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- Category Navbar -->
+  <nav class="category-navbar">
+    <div class="container">
+      <ul>
+        <li><a href="#"><i class="fas fa-prescription-bottle-alt"></i> Medicines</a></li>
+        <li><a href="#"><i class="fas fa-hand-holding-heart"></i> Personal Care</a></li>
+        <li><a href="#"><i class="fas fa-dumbbell"></i> Wellbeing & Fitness</a></li>
+        <li><a href="#"><i class="fas fa-stethoscope"></i> Medical Devices</a></li>
+        <li><a href="#"><i class="fas fa-spa"></i> Beauty & Cosmetics</a></li>
+        <li><a href="#"><i class="fas fa-bolt"></i> Tez Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1 onmouseover="changeText(this)" onmouseout="resetText(this)">Find Your Medicines at the Nearest Pharmacies</h1>
+    <p>Save Time. Get Medicines Faster.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Enter medicine name...">
+      <button><i class="fas fa-search"></i> Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- Link External JS File -->
+<script src="script.js"></script>
+
+
+  <!-- Advertisement Banner -->
+<section class="advertisement">
+  <div class="container">
+    <div class="ad-content">
+      <i class="fas fa-bullhorn"></i>
+      <h2>Advertise Your Medicines Here</h2>
+      <p>Promote your medicines and reach thousands of customers daily.</p>
+      <button class="ad-btn">Learn More</button>
+    </div>
+  </div>
+</section>
+
+ <!-- Feature Section -->
+<section class="features">
+  <div class="container">
+    <h2>Why Choose <span>MediLocate?</span></h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <a href="index.html">
+        <h3><i class="fas fa-pills"></i> Medicine Availability</h3>
+        <p>Find medicines at nearby pharmacies easily.</p>
+      </a>
+      </div>
+      <div class="feature-card">
+        <a href="index.html">
+        <h3><i class="fas fa-sync-alt"></i> Real-Time Stock Updates</h3>
+        <p>Check if your medicine is available now.</p>
+        </a>
+      </div>
+      <div class="feature-card">
+        <a href="index.html">
+        <h3><i class="fas fa-truck"></i> Home Delivery Service</h3>
+        <p>Get medicines delivered to your doorstep.</p>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fitness Equipment Section -->
+<section class="fitness-equipment">
+  <div class="container">
+    <h2><i class="fas fa-dumbbell"></i> Top Fitness Equipment</h2>
+    <div class="equipment-grid">
+      <div class="equipment-card">
+        <img src="https://plus.unsplash.com/premium_photo-1675174652746-6cd56a9adceb?q=80&w=800&auto=format&fit=crop" alt="Treadmill">
+        <h3>Treadmill</h3>
+        <p>High-quality treadmill for cardio workouts.</p>
+        <button class="equip-btn">View More</button>
+      </div>
+      <div class="equipment-card">
+        <img src="https://plus.unsplash.com/premium_photo-1675108190134-b8a642e86c43?q=80&w=800&auto=format&fit=crop" alt="Dumbbells">
+        <h3>Dumbbells</h3>
+        <p>Durable dumbbells for strength training.</p>
+        <button class="equip-btn">View More</button>
+      </div>
+      <div class="equipment-card">
+        <img src="https://plus.unsplash.com/premium_photo-1675122443515-3a6571c4dcdd?q=80&w=800&auto=format&fit=crop" alt="Yoga Mat">
+        <h3>Yoga Mat</h3>
+        <p>Comfortable yoga mat for flexibility and balance.</p>
+        <button class="equip-btn">View More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2><i class="fas fa-comments"></i> What Our Customers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>"MediLocate saved me so much time! I found my medicine in minutes."</p>
+          <span>- John Doe</span>
+        </div>
+        <div class="testimonial">
+          <p>"The real-time updates are a game-changer. Highly recommend!"</p>
+          <span>- Jane Smith</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <button class="cta-button"><i class="fas fa-search"></i> Search for Medicines Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+        <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

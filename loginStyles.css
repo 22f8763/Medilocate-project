@@ -1,0 +1,240 @@
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Make container responsive */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+.login-container h2 {
+  color: #00A676;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00A676;
+  box-shadow: 0 0 0 2px rgba(0, 166, 118, 0.2);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  z-index: 10;
+  opacity: 0.7;
+  /* Adjust for error message space */
+  margin-top: -10px;
+}
+
+.password-toggle:hover {
+  opacity: 1;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #00A676;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(0, 166, 118, 0.1);
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Make form options responsive */
+@media (max-width: 360px) {
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remember-me input {
+  margin: 0;
+}
+
+.forgot-password {
+  color: #00A676;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #00A676;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #008C5E;
+  font-weight: bold;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+  padding: 0 15px;
+  color: #888;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-login button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.social-login button:active {
+  transform: scale(0.98);
+}
+
+.google-login {
+  background: #DB4437;
+  color: white;
+}
+
+.google-login:hover {
+  background: #C1351D;
+  font-weight: bold;
+}
+
+.facebook-login {
+  background: #1877F2;
+  color: white;
+}
+
+.facebook-login:hover {
+  background: #1257A6;
+  font-weight: bold;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #00A676;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Additional responsive styling */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 0;
+  }
+}
+
+/* Fix for mobile browsers autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #333;
+} 

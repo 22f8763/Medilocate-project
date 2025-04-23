@@ -1,0 +1,132 @@
+.signup-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.signup-container h2 {
+  color: #00A676;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00A676;
+  box-shadow: 0 0 0 2px rgba(0, 166, 118, 0.2);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #00A676;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(0, 166, 118, 0.1);
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #00A676;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #008C5E;
+  font-weight: bold;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+.social-signup {
+  margin-top: 20px;
+}
+
+.social-signup button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.social-signup button:active {
+  transform: scale(0.98);
+}
+
+.google-signup {
+  background: #DB4437;
+  color: white;
+}
+
+.google-signup:hover {
+  background: #C1351D;
+  font-weight: bold;
+}
+
+.facebook-signup {
+  background: #1877F2;
+  color: white;
+}
+
+.facebook-signup:hover {
+  background: #1257A6;
+  font-weight: bold;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #00A676;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+} 
